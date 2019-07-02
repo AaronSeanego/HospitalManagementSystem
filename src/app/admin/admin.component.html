@@ -1,0 +1,47 @@
+<div>
+    <form [formGroup] = "RegisterForm">
+        <table>
+            <tr>
+                <input placeholder = "Patient Name" class = "patient_name" [(ngModel)] = "patientName" formControlName = "patient_name"/>
+            </tr>
+
+            <tr>
+                <td><input placeholder = "Patient Surname" class = "patient_surname" [(ngModel)] = "patientSurname" formControlName = "patient_surname"/></td>
+            </tr>
+
+            <tr>
+                <td><input placeholder = "Patient Age" class = "patient_age" [(ngModel)] = "patientAge" formControlName = "patient_age"/></td>
+            </tr>
+            
+            <tr>
+                <td>Gender</td>
+                <td><input type = "radio" value = "Male" [(ngModel)] = "patientGender" formControlName = "gender"/>Male</td>
+                <td><input type = "radio" value = "Female" [(ngModel)] = "patientGender" formControlName = "gender"/>Female</td>
+            </tr>
+
+            <tr>
+                <td><textarea cols = "36" rows = "4" placeholder = "Patient Address" class = "patient_address" [(ngModel)] = "patientAddress" formControlName = "patient_address"></textarea></td>
+            </tr>
+
+            <tr>
+                <td><input placeholder = "Cell Number" class = "cell_number" [(ngModel)] = "patientCell" formControlName = "cell_number"/></td>
+            </tr>
+
+            <tr>
+                <td><input placeholder = "Email" class = "eMail" [(ngModel)] = "patientEmail" formControlName = "eMail"/></td>
+            </tr>
+            
+            <tr>
+                <td><button (click) = "AddPatients()">Register</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div>
+    <table *ngFor = "let patient of Patient_Info">
+        <tr>
+            <td><a href = "#" routerLink = "/patients">{{patient.patient_name}}</a></td>
+        </tr>
+    </table>
+</div>
