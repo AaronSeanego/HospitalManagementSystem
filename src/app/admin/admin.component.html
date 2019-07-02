@@ -39,9 +39,9 @@
 </div>
 
 <div>
-    <table *ngFor = "let patient of Patient_Info">
+    <table *ngFor = "let patient of Patients_Info">
         <tr>
-            <td><a href = "#" routerLink = "/patients">{{patient.patient_name}}</a></td>
+            <td><a href = "#" routerLink = "/patients" (click) = "PatientInfo(patient)">{{patient.patient_name}}</a></td>
         </tr>
     </table>
 </div>

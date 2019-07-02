@@ -26,7 +26,15 @@ export class HospitalDataService {
 
   ShowPatient(name) {
     let index = this.HospitalData.indexOf(name);
-    this.Show_Patient.push(index);
+    this.Show_Patient.push({
+      patient_name:this.HospitalData[index].patient_name,
+      patient_surname:this.HospitalData[index].patient_surname,
+      patient_age:this.HospitalData[index].patient_age,
+      patient_gender:this.HospitalData[index].patient_gender,
+      patient_address:this.HospitalData[index].patient_address,
+      patient_cell_number:this.HospitalData[index].patient_cell_number,
+      patient_email:this.HospitalData[index].patient_email
+    });
     return this.Show_Patient;
   }
 }

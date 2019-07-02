@@ -9,13 +9,14 @@ import { HospitalDataService } from '../hospital-data.service';
 export class PatientsComponent implements OnInit {
   public Patient_Data = [];
   public showPatient = [];
-  name;
   constructor(public patientService:HospitalDataService) {
     this.Patient_Data = this.patientService.Patients();
-    this.showPatient = this.patientService.ShowPatient(name);
   }
 
   ngOnInit() {
   }
 
+  PatientInfo(patient) {
+    this.showPatient = this.patientService.ShowPatient(patient);
+  }
 }
