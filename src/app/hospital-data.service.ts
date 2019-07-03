@@ -10,6 +10,8 @@ export class HospitalDataService {
 
   AddNewPatient(Patient_Name,Patient_Surname,Patient_Age,Patient_Gender,Patient_Address,Patient_Cell_Number,Patient_Email) {
     this.HospitalData.push({
+      patient_id : this.HospitalData.length + 1,
+      patient_avatar: "149071.png",
       patient_name:Patient_Name,
       patient_surname:Patient_Surname,
       patient_age:Patient_Age,
@@ -20,13 +22,21 @@ export class HospitalDataService {
     })
   }
 
+  RemovePatient(patient) {
+    let index = this.HospitalData.indexOf(patient);
+    this.HospitalData.splice(index,1);
+  }
+
   Patients() {
     return this.HospitalData;
   }
 
   ShowPatient(name) {
     let index = this.HospitalData.indexOf(name);
+    this.Show_Patient.splice(0,1);
     this.Show_Patient.push({
+      patient_id:this.HospitalData[index].patient_id,
+      patient_avatar: "149071.png",
       patient_name:this.HospitalData[index].patient_name,
       patient_surname:this.HospitalData[index].patient_surname,
       patient_age:this.HospitalData[index].patient_age,
@@ -35,6 +45,10 @@ export class HospitalDataService {
       patient_cell_number:this.HospitalData[index].patient_cell_number,
       patient_email:this.HospitalData[index].patient_email
     });
+      
+  }
+
+  ListPatients() {
     return this.Show_Patient;
   }
 }

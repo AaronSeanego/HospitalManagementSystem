@@ -1,2 +1,6 @@
 @charset "UTF-8";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+    background-color: rgba(255,255,255,1);
+}

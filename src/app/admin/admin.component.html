@@ -1,8 +1,8 @@
-<div>
+<div class = "dataForm">
     <form [formGroup] = "RegisterForm">
         <table>
             <tr>
-                <input placeholder = "Patient Name" class = "patient_name" [(ngModel)] = "patientName" formControlName = "patient_name"/>
+                <td><input placeholder = "Patient Name" class = "patient_name" [(ngModel)] = "patientName" formControlName = "patient_name"/></td>
             </tr>
 
             <tr>
@@ -14,9 +14,8 @@
             </tr>
             
             <tr>
-                <td>Gender</td>
-                <td><input type = "radio" value = "Male" [(ngModel)] = "patientGender" formControlName = "gender"/>Male</td>
-                <td><input type = "radio" value = "Female" [(ngModel)] = "patientGender" formControlName = "gender"/>Female</td>
+                <input type = "radio" value = "Male" [(ngModel)] = "patientGender" formControlName = "gender" style = "margin-top: 15px;margin-bottom: 15px;"/>Male
+                <input type = "radio" value = "Female" [(ngModel)] = "patientGender" formControlName = "gender" style = "margin-top: 15px;margin-bottom: 15px;"/>Female
             </tr>
 
             <tr>
@@ -38,10 +37,18 @@
     </form>
 </div>
 
-<div>
-    <table *ngFor = "let patient of Patients_Info">
-        <tr>
-            <td><a href = "#" routerLink = "/patients" (click) = "PatientInfo(patient)">{{patient.patient_name}}</a></td>
+<div class = "tableData" style = "text-align: center;">
+    <table>
+        <tr *ngFor = "let patient of Patients_Info">
+            <td style = "max-width: 200px;"><img src = "/assets/{{patient.patient_avatar}}" alt = "avatar" width = "100px" height = "100px"/></td>
+            <td>
+                <h1>ID: {{patient.patient_id}}</h1>
+                <h3><pre>{{patient.patient_name}} {{patient.patient_surname}}</pre></h3>
+            </td>
+            <td>
+                <button (click) = "Remove_Patient(patient)">Delete</button>
+                <button routerLink = "/patients" (click) = "PatientInfo(patient)">VIEW</button>
+            </td>
         </tr>
     </table>
 </div>

@@ -11,12 +11,9 @@ export class PatientsComponent implements OnInit {
   public showPatient = [];
   constructor(public patientService:HospitalDataService) {
     this.Patient_Data = this.patientService.Patients();
+    this.showPatient = this.patientService.ListPatients();
   }
 
   ngOnInit() {
-  }
-
-  PatientInfo(patient) {
-    this.showPatient = this.patientService.ShowPatient(patient);
   }
 }

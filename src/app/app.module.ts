@@ -3,7 +3,7 @@ import { NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {MatButtonModule} from '@angular/material';
+import {MatButtonModule,MatCardModule,MatToolbarModule} from '@angular/material';
 import { AdminComponent } from './admin/admin.component';
 import { FormGroup,FormBuilder, ReactiveFormsModule,FormsModule,Validators} from '@angular/forms'
 import { HospitalDataService} from './hospital-data.service';
@@ -22,6 +22,8 @@ import { PatientsComponent } from './patients/patients.component';
     MatButtonModule,
     ReactiveFormsModule,
     FormsModule,
+    MatCardModule,
+    MatToolbarModule
   ],
   providers: [HospitalDataService],
   bootstrap: [AppComponent]

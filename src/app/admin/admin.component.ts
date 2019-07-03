@@ -17,7 +17,6 @@ export class AdminComponent implements OnInit {
   patientAddress;
   patientCell;
   patientEmail
-
   constructor(public formBuilder:FormBuilder,public hospitaldataService: HospitalDataService) {
     this.RegisterForm = formBuilder.group({
       patient_name : ["",[Validators.required]],
@@ -46,5 +45,9 @@ export class AdminComponent implements OnInit {
 
   PatientInfo(patient) {
     this.hospitaldataService.ShowPatient(patient)
+  }
+
+  Remove_Patient(patient) {
+    this.hospitaldataService.RemovePatient(patient)
   }
 }

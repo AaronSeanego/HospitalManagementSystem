@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+.searchForm {}
+
+.searchForm form {
+    float: right;
+}
+
+.searchForm form input {
+    padding: 8px;
+    background: transparent;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: 260px;
+    margin-top: 10px;
+}
+
+.searchForm form button {
+    margin-left: 2px;
+    padding: 8px;
+    width: 100px;
+    background: transparent;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.dataForm {
+    text-align: center;
+}
+
+.dataForm form {
+    margin: 160px 790px;
+}
+
+.dataForm form table {}
+
+.dataForm form table tr {}
+
+.dataForm form table tr td {}
+
+.dataForm form table tr input[type=radio] {
+}
+
+.dataForm form table tr td input {
+    padding: 8px;
+    background: transparent;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: 260px;
+    margin-top: 10px;
+}
+
+.dataForm form table tr td textarea {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.dataForm form table tr td button {
+    margin: 20px;
+    padding: 8px;
+    width: 100px;
+    background: transparent;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.tableData {}
+
+.tableData table {
+    margin: auto 520px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.tableData table tr {}
+
+.tableData table tr td {
+    width: 200px;
+}
