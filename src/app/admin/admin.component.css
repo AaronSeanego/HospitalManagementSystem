@@ -65,16 +65,3 @@
     border: 1px solid #000000;
     border-radius: 5px;
 }
-
-.tableData {}
-
-.tableData table {
-    margin: auto 520px;
-    background-color: rgba(0,0,0,0.1);
-}
-
-.tableData table tr {}
-
-.tableData table tr td {
-    width: 200px;
-}

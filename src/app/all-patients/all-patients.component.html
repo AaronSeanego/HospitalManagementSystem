@@ -1,0 +1,25 @@
+<div style = "margin: 200px auto;">
+    <mat-list style = "width: 500px;margin: auto 700px;margin-bottom: 50px;border-top: 1px solid lightgrey;" *ngFor = "let allPatients of All_Patients">
+        <h3 mat-subheader>Patient Names</h3>
+        <mat-list-item>
+            <mat-icon mat-list-icon style = "margin-bottom: 40px;">
+                <img src = "assets/{{allPatients.patient_avatar}}" alt = "avatar" width = "50px" height = "50px" style = "margin-bottom: 50px;"/>
+            </mat-icon>
+            <h4 mat-line style = "margin-left: 20px;">{{allPatients.patient_name}} {{allPatients.patient_surname}}</h4>
+            <p mat-line style = "margin-left: 20px;">{{allPatients.patient_id}}</p>
+            <p mat-line style = "margin-left: 20px;">{{allPatients.patient_gender}}</p>
+            <p mat-line style = "margin-left: 20px;">{{allPatients.patient_age}}</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+            <h3 mat-subheader>Contacts</h3>
+        <mat-list-item>
+            <p mat-line>{{allPatients.patient_address}}</p>
+            <p mat-line>{{allPatients.patient_cell_number}}</p>
+            <p mat-line>{{allPatients.patient_email}}</p>
+        </mat-list-item>
+        
+        <mat-divider></mat-divider>
+        <button mat-stroked-button style = "margin-bottom: 10px;margin-top: 10px;" routerLink = "/appointments" (click) = "getID(allPatients)">APPOINTMENTS</button>
+        <mat-divider></mat-divider>
+    </mat-list>            
+</div>

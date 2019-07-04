@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class HospitalDataService {
   private HospitalData = [];
   private Show_Patient = [];
+  private Appointments = [];
   constructor() {}
 
   AddNewPatient(Patient_Name,Patient_Surname,Patient_Age,Patient_Gender,Patient_Address,Patient_Cell_Number,Patient_Email) {
@@ -50,5 +51,18 @@ export class HospitalDataService {
 
   ListPatients() {
     return this.Show_Patient;
+  }
+
+  MakeAppoinments(patientsID,appointment_date,appointment_reason,appointment_doctor) {
+    this.Appointments.push({
+      patient_id:patientsID,
+      appointmentDate:appointment_date,
+      appointmentReason:appointment_reason,
+      appointmentDoctor:appointment_doctor
+    })
+  }
+
+  ViewAppointments() {
+    return this.Appointments;
   }
 }

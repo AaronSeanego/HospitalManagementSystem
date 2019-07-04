@@ -2,14 +2,10 @@
 <section style = "margin-top: 300px;">
     <nav>
         <mat-card class="example-card" *ngFor = "let displayPatient of showPatient" style = "margin: 10px 600px; width: 800px;">
-            <div mat-card-avatar class="example-header-image">
-                <img src = "/assets/{{displayPatient.patient_avatar}}" alt = "avatar" width = "40px" height = "40px"/>
-            </div>
             <mat-card-header>
                 <div mat-card-avatar class="example-header-image"></div>
                 <mat-card-title>
-                    <td>{{displayPatient.patient_name}}</td>
-                    <td>{{displayPatient.patient_surname}}</td>
+                    <td><pre>{{displayPatient.patient_name}} {{displayPatient.patient_surname}}</pre></td>
                 </mat-card-title>
                 <mat-card-subtitle>ID: {{displayPatient.patient_id}}</mat-card-subtitle>
             </mat-card-header>

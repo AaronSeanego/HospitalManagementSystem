@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.appointment_form {
+    text-align: center;
+}
+
+.appointment_form form {
+    margin: auto 790px;
+}
+
+.appointment_form form table {}
+
+.appointment_form form table tr {}
+
+.appointment_form form table tr td {}
+
+.appointment_form form table tr td input {
+    padding: 8px;
+    background: transparent;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: 260px;
+    margin-top: 10px;
+}
+
+.appointment_form form table tr td textarea {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.appointment_form form table tr button {
+    margin-top: 30px;
+}

@@ -37,18 +37,25 @@
     </form>
 </div>
 
-<div class = "tableData" style = "text-align: center;">
-    <table>
-        <tr *ngFor = "let patient of Patients_Info">
-            <td style = "max-width: 200px;"><img src = "/assets/{{patient.patient_avatar}}" alt = "avatar" width = "100px" height = "100px"/></td>
-            <td>
-                <h1>ID: {{patient.patient_id}}</h1>
-                <h3><pre>{{patient.patient_name}} {{patient.patient_surname}}</pre></h3>
-            </td>
-            <td>
-                <button (click) = "Remove_Patient(patient)">Delete</button>
-                <button routerLink = "/patients" (click) = "PatientInfo(patient)">VIEW</button>
-            </td>
-        </tr>
-    </table>
+<div class = "tableData">
+    <mat-list *ngFor = "let patient of Patients_Info" style = "width: 500px;margin: auto 700px;margin-bottom: 50px;">
+        <h3 mat-subheader style = "margin-bottom: 20px;">Patient Info</h3>
+            <mat-list-item>
+                <mat-icon mat-list-icon style = "margin-bottom: 80px;">
+                    <img src = "/assets/{{patient.patient_avatar}}" alt = "avatar" width = "70px" height = "70px"/>
+                </mat-icon>
+                <h3 mat-line style = "margin-left: 50px;">{{patient.patient_name}} {{patient.patient_surname}}</h3>
+                <p mat-line style = "margin-left: 50px;margin-bottom: 50px;"> {{patient.patient_id}} </p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        <h3 mat-subheader>Contacts</h3>
+            <mat-list-item>
+                <mat-icon mat-list-icon>phone</mat-icon>
+                <h4 mat-line>{{patient.patient_cell_number}}</h4>
+                <h4 mat-line> {{patient.patient_email}} </h4>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <button mat-stroked-button (click) = "Remove_Patient(patient)" style = "margin-right: 10px;">DELETE</button>
+            <button mat-stroked-button routerLink = "/patients" (click) = "PatientInfo(patient)">VIEW</button>
+    </mat-list>
 </div>
